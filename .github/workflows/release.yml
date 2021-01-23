@@ -39,6 +39,7 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./target/release/test-github-actions
           asset_name: test-github-actions
+          asset_content_type: application/octet-stream
   build_windows:
     name: Upload Windows Release Asset
     runs-on: windows-latest
@@ -58,3 +59,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./target/release/test-github-actions.exe
           asset_name: test-github-actions.exe
+          asset_content_type: application-octet-stream
