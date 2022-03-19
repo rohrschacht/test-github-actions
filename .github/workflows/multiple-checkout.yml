@@ -29,6 +29,9 @@ jobs:
         
       - name: show multiple
         run: tree -va
+        
+      - name: show python version
+        run: python3 --version
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
